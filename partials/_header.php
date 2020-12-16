@@ -3,7 +3,7 @@
     include 'partials/_signupModal.php';
     include 'partials/_loginModal.php';
     include 'partials/_dbconnect.php';
-echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+echo '<nav class="navbar navbar-expand-lg navbar-light bg-light nav_head shadow">
 <a class="navbar-brand" href="/forum_1/main.php">iDiscuss</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="nav-link" href="/forum_1/main.php">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/forum_1/about.php">About</a>
+      <a class="nav-link" href="#/forum_1/about.php">About</a>
     </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -23,10 +23,14 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">';
         
-        $sql = "SELECT category_name FROM `categories` LIMIT 4";
+        // $sql = "SELECT category_name FROM `categories` LIMIT 4";
+        // $result = mysqli_query($conn, $sql);
+        $sql = "SELECT * FROM `categories` LIMIT 4";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_assoc($result)){
-          echo '<a href="#" class="text-dark lead px-3 my-1  ">'.$row['category_name'].'</a><br>';
+          $id = $row['category_id'];
+          $cat = $row['category_name'];
+          echo '<a href="threadlist.php?catid='.$id.'" class="text-dark lead px-3 my-1  ">'.$cat.'</a><br>';
         }
 
       echo '</div>

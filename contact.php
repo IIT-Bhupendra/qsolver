@@ -16,15 +16,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>iDiscuss - Contact Us</title>
     <style>
     .container {
-        min-height: 82vh;
+        min-height: 80vh;
         max-width: 120vh;
-        background-color: #F3E2A9;
+        /* background-color: #F3E2A9; */
         border-radius: 10px;
         padding: 10px;
+        margin-top: 10vh !important;
     }
     </style>
 </head>
@@ -34,9 +36,9 @@
     <?php include 'partials/_dbconnect.php';?>
     <?php include 'partials/_header.php';?>
 
-    <div class="container my-3">
+    <div class="container my-2">
         <form>
-            <h1 class="text-center my-2">Contact Us Form Here</h1>
+            <h1 class="text-center my-1">Contact Us Form Here</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Email</label>
@@ -72,7 +74,7 @@
                     <input type="text" class="form-control" id="inputZip">
                 </div>
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-success mb-2">SUBMIT YOUR CONSENT</button>
             <p class="text-dark">1)You can also mail your issue to boardline contact no. : 9058378468</p>
             <p class="text-dark">2)Also, You can mail us directly at ceo@idiscuss.com</p>
             <p class="text-dark"><b>Note :</b>Don't send any offensive mail or query neither online nor offline</p>

@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
     <title>iDiscuss - Forum to Discuss Everything</title>
 </head>
 
@@ -67,7 +67,7 @@
                 $cat = $row['category_name'];
                 $desc = $row['category_description'];
                 echo '<div class="col-md-4 my-2">
-                <div class="card" style="width: 18rem;">
+                <div class="card shadow mt-2" style="width: 20rem;">
                     <img src="https://source.unsplash.com/500x400/?'.$cat.',coding" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"> <a href="threadlist.php?catid='.$id.'" > '.$cat.'</a></h5>
