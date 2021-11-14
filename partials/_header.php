@@ -3,49 +3,51 @@
     include 'partials/_signupModal.php';
     include 'partials/_loginModal.php';
     include 'partials/_dbconnect.php';
-echo '<nav class="navbar navbar-expand-lg navbar-light bg-light nav_head shadow">
-<a class="navbar-brand" href="/forum_1/main.php">iDiscuss</a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    echo '<nav class="navbar navbar-expand-lg navbar-light bg-light nav_head shadow">
+            <a class="navbar-brand" href="/forum_1/main.php">
+              <span class="brand_title">qSolver</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="/forum_1/main.php">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#/forum_1/about.php">About</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Top Categories
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">';
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/forum_1/main.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#/forum_1/about.php">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Top Categories
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">';
         
-        // $sql = "SELECT category_name FROM `categories` LIMIT 4";
-        // $result = mysqli_query($conn, $sql);
-        $sql = "SELECT * FROM `categories` LIMIT 4";
-        $result = mysqli_query($conn, $sql);
-        while($row = mysqli_fetch_assoc($result)){
-          $id = $row['category_id'];
-          $cat = $row['category_name'];
-          echo '<a href="threadlist.php?catid='.$id.'" class="text-dark lead px-3 my-1  ">'.$cat.'</a><br>';
-        }
+    // $sql = "SELECT category_name FROM `categories` LIMIT 4";
+    // $result = mysqli_query($conn, $sql);
+    $sql = "SELECT * FROM `categories` LIMIT 4";
+    $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
+      $id = $row['category_id'];
+      $cat = $row['category_name'];
+      echo '<a href="threadlist.php?catid='.$id.'" class="text-dark lead px-3 my-1  ">'.$cat.'</a><br>';
+    }
 
-      echo '</div>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/forum_1/contact.php" >Contact</a>
-    </li>
-  </ul>';
+            echo '</div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/forum_1/contact.php" >Contact</a>
+                </li>
+              </ul>';
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
       $fname = $_SESSION['fname'];
       $lname = $_SESSION['lname'];
     echo '<form class="form-inline my-2 my-lg-0" action="search.php" method="get">
             <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
-            <p class="text-light mx-2 my-0">'.$fname.' '.$lname.'</p>
+            <p class="mx-2 my-0">'.$fname.' '.$lname.'</p>
             <a href="partials/_signout.php" type="button" class="btn btn-outline-success ml-2">
             Sign Out
             </a>

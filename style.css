@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita&display=swap");
 
 * {
   font-family: "Raleway", sans-serif;
@@ -29,6 +30,10 @@
   font-weight: bolder !important;
   width: 100% !important;
   z-index: 9999;
+}
+
+.brand_title {
+  font-family: "Amita", cursive;
 }
 
 .JumBo {
