@@ -8,7 +8,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="/forum_1/partials/_handlelogin.php" method="post">
+            <form action="/partials/_handlelogin.php" method="post">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="email">Email address</label>
