@@ -16,17 +16,17 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             $_SESSION['fname'] = $row['user_first_name'];
             $_SESSION['lname'] = $row['user_last_name'];
             $_SESSION['sno'] = $row['user_serial_number'];
-            header("location: /main.php");
+            header("location: /index.php");
             // echo "Success".$_SESSION['fname']." ".$_SESSION['lname'];
             exit;
         }  
         else{
-            header("location: /main.php?pass_error=true");
+            header("location: /index.php?pass_error=true");
             exit;
         }     
     }
-    header("location: /main.php?no_account=true");
+    header("location: /index.php?no_account=true");
 }
 
-// header("location: /forum_1/main.php");
+// header("location: /forum_1/index.php");
 ?>

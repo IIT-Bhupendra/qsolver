@@ -24,13 +24,13 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             $result = mysqli_query($conn,$sql);
             if($result){
                 $showAlert = true;
-                header("location: /main.php?signupsuccess=true");
+                header("location: /index.php?signupsuccess=true");
                 exit();
             }           
         }
         $showError = "Passwords did not matched";
     }
-    header("location: /main.php?signupsuccess=false&error=$showError");
+    header("location: /index.php?signupsuccess=false&error=$showError");
 }
 
 

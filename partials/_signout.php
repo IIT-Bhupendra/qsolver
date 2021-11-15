@@ -3,6 +3,6 @@
     echo "Please wait , We are signing you out.";
     session_destroy();
     session_unset();
-    header("location: /main.php?lo=true");
+    header("location: /index.php?lo=true");
     exit();
 ?>
