@@ -4,6 +4,10 @@
     // $username = "uczfmuguxda7r5ym";
     // $password = "s1fTGxBIdfkhGJmFsiQR";
     // $database = "bfizooxdv5y7ss6iba6j";
+    require_once realpath(__DIR__ . "/vendor/autoload.php");
+
+    use Dotenv\Dotenv;
+
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->safeLoad();    
 
