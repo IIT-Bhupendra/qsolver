@@ -8,10 +8,10 @@
     // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     // $dotenv->safeLoad();    
 
-    // $server = getenv('SERVER_NAME');
-    // $username = getenv('USER_NAME');
-    // $password = getenv('USER_IDENTIFICATION');
-    // $database = getenv('DB_NAME');
+    $server = getenv('SERVER_NAME');
+    $username = getenv('USER_NAME');
+    $password = getenv('USER_IDENTIFICATION');
+    $database = getenv('DB_NAME');
 
     // echo vardum($server);
 
