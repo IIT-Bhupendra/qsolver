@@ -29,7 +29,7 @@
   top: 0;
   font-weight: bolder !important;
   width: 100% !important;
-  z-index: 9999;
+/* z-index: 9999; */
 }
 
 .brand_title {
