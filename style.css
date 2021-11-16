@@ -25,7 +25,7 @@
 }
 
 .nav_head {
-  position: fixed !important;
+/* position: fixed !important; */
   top: 0;
   font-weight: bolder !important;
   width: 100% !important;
