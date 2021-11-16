@@ -5,7 +5,7 @@
     $database = "bfizooxdv5y7ss6iba6j";
     echo getenv('DB_NAME');
     echo "<br>";
-    echo $_ENV['SERVER_NAME'];
+    echo getenv('SERVER_NAME');
     echo "<br>";
     echo getenv('USER_IDENTIFICATION');
     echo "<br>";
