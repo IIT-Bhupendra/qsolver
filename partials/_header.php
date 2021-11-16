@@ -3,7 +3,7 @@
     include 'partials/_signupModal.php';
     include 'partials/_loginModal.php';
     include 'partials/_dbconnect.php';
-    echo '<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow">
+    echo '<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
             <a class="navbar-brand" href="/index.php">
               <span class="brand_title">qSolver</span>
             </a>
