@@ -26,7 +26,7 @@
 
 .nav_head {
 /* position: fixed !important; */
-  top: 0;
+/* top: 0; */
   font-weight: bolder !important;
   width: 100% !important;
 /* z-index: 9999; */
